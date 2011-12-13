@@ -1,0 +1,23 @@
+[{:	name"snippet.txt:content"Ç#!/usr/bin/ruby
+
+require 'rubygems'
+require 'rspec'
+
+def mkmodules(*args)
+  args.reduce('') do |current, name|
+    next_const = "#{current}::#{name}"
+    eval "module #{next_const}; end"
+    eval(next_const).tap {|x| puts x }
+  end
+end
+
+m = mkmodules(:Lumos, :Views, :TrainerApp, :Dashboard)
+m.class.should == Module
+m.should == Lumos::Views::TrainerApp::Dashboard
+
+__END__
+
+Lumos
+Lumos::Views
+Lumos::Views::TrainerApp
+Lumos::Views::TrainerApp::Dashboard

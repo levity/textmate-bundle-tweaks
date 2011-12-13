@@ -1,0 +1,10 @@
+Quick-and-dirty first attempt at finding a way to avoid having to tweak
+my TextMate bundles to my preferences every time I set up a new system.
+The GitHub and RSpec bundles actually have their own repositories, viz:
+
+  git://github.com/gtcaz/github-tmbundle.git
+  git://github.com/rspec/rspec-tmbundle.git
+
+...but I've smashed them into this one. (I did say "quick-and-dirty".)
+
+--L

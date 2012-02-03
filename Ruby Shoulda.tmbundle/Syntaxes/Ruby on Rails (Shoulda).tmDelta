@@ -7,7 +7,7 @@
 		<key>foldingStopMarker</key>
 		<string>(?x)
 		(   (^|;) \s*+ end   \s*+ ([#].*)? $
-		|   (^|;) \s*+ (end|\}) (\.|\)|\ ) .* $
+		|   (^|;) \s*+ (end|\}|\]) (\.|\)|\ ) .* $
 		|   ^     \s*+ [}\]\)]+ ,? \s*+ ([#].*)? $
 		|   [#] .*? \(end\) \s*+ $    # Sune’s special marker
 		|   ^=end
